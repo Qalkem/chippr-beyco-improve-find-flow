@@ -14,22 +14,36 @@
           <nav class="NavTitel">
             <ul  style="list-style-type: none;" class="LogoAndLink">  
              <li><img class="LogoWrapper" src="./beyco_coffee_logo.png"></li>
-             <li><a ">Searchbar</a></li>
-             <li ><details class="ForWhom">
-                <summary > Menu</summary>
-                 <ul class="SummaryList" style="list-style-type: none;">
-                    <li><a href="https://beyco.nl/login">Log in</a></li>
-                    <li><a href="https://beyco.nl/register">Register</a></li>
-                   <li><a href="https://beyco.nl/for-whom/sellers">Sellers</a></li>
-                   <li><a href="https://beyco.nl/for-whom/traders">Traders</a></li> 
-                   <li><a href="https://beyco.nl/for-whom/buyers">Buyers</a></li>
+             <li><input class="SearchInput" type="text" placeholder="Search.."></li>
+             <li ><details class="Menu">
+                <summary> Menu</summary>
+                 <ul class="SummaryList" style="list-style-type: none;" >
+                    <li><a href="https://beyco.nl/login" style="text-decoration: none;">Log in</a></li>
+                    <li><a href="https://beyco.nl/register" style="text-decoration: none;">Register</a></li>
+                   <li><a href="https://beyco.nl/for-whom/sellers" style="text-decoration: none;">Sellers</a></li>
+                   <li><a href="https://beyco.nl/for-whom/traders" style="text-decoration: none;">Traders</a></li> 
+                   <li><a href="https://beyco.nl/for-whom/buyers" style="text-decoration: none;">Buyers</a></li>
                 </ul>
             </ul> 
         </header>
         <main>    
             <section class="CoffeeText">  
                 <h2 class="Welcome"> Coffee </h2>  
-                <p> 50 items found</p>     
+                <form >
+                    <label>Sort</label>
+                    <select   class="Landen" name="LandSelect" data-minimum-results-for-search="infinity">
+                        <option value="Country">Country</option>
+                        <option value="Colombia">Colombia</option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+
+                    </select>
+                </form>
+                    
             </section>
             <section class="FirstArticle"> 
                 <section></section> 

@@ -13,10 +13,29 @@
     }
    
     .LogoWrapper{
-      max-width:20vh;
-      max-height:20vh;
-    }
+      max-width:15vh;
+      max-height:15vh;
+    margin-left:-3em;
+  }
    
+  .SearchInput{
+    margin-left:-3em;
+    margin-top:1em;
+    max-width:7em;
+  }
+
+  .Menu{
+    margin-left: -2em;
+    margin-top: 1em;
+    
+  }
+ details > summary{
+   list-style: none;
+ }
+  .Menu > ul{
+    margin-left:-1.5em;
+    list-style: none;
+  }
     .LogoAndLink{
      display:flex;
      gap: 10vh;
