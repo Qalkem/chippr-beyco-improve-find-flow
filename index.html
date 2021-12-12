@@ -27,24 +27,43 @@
             </ul> 
         </header>
         <main>    
-            <section class="CoffeeText">  
-                <h2 class="Welcome"> Coffee </h2>  
-                <form >
-                    <label>Sort</label>
+
+            <section  class="SortAndFilter"> 
+            <section class="Sort">
+            <H3>Sort</H3>
+            </section>
+            <span id="FilterButton"> <h3>Filter</h3>
+                
+            </span>
+            <section id="Filter" class="Filter">  
+                <h3 class="Welcome"> Filter </h3>  
+                <form>
+                    <label>Choose a country:</label>
                     <select   class="Landen" name="LandSelect" data-minimum-results-for-search="infinity">
                         <option value="Country">Country</option>
                         <option value="Colombia">Colombia</option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-
+                        <option value="Ethipie">Ethopie</option>
+                        <option value="India">India </option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Uganda">Uganda</option>
                     </select>
                 </form>
-                    
+                <form >
+                    <label>certification</label>
+                    <select   class="CertificationBox" name="LandSelect" data-minimum-results-for-search="infinity">
+                        <option value="Certification">Certification</option>
+                        <option value="Fairtrade">Fairtrade</option>
+                        <option value="Rainforest">Rainforest Alliance</option>
+                        <option value="Organic">Orgaic</option>
+                        <option value="CAFE">C.A.F.E Practices</option>
+                        <option value="VierC">4c</option>
+                        <option value="CertifyAll">all</option>
+                    </select>
+                </form>
             </section>
+        </section>
+
             <section class="FirstArticle"> 
                 <section></section> 
                 <section></section>
@@ -54,5 +73,5 @@
         <footer>  
         </footer>  
       </body>
-      <script src="scripts/script.js" ></script>
+      <script src="scripts/style.js" ></script>
      </html>

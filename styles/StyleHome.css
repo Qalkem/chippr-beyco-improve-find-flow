@@ -3,7 +3,7 @@
       align-items: center;
       block-size: fit-content;
       margin-left:20px;
-      margin-right:20px;
+      margin-right:0;
     }
     
    
@@ -41,7 +41,58 @@
      gap: 10vh;
     }
    
+  .SortAndFilter{
+    display: flex;
+    margin-left:6em;
+    gap:4em;
+
+  }
+
+  #Filterbutton{
+    position:fixed;
+    top:2em;
+    right:2em;
+    display:none;
+  }
+
+  #FilterButton:hover{
+    cursor: pointer;
+  }
+  span{
+    display: inline-block;
+    z-index: 10;
+  }
+
+
+  .Filter{
+    transform:translateX(1000px);
+    transition:transform 500ms;
+    display:flex;
+    flex-direction: column;
+    line-height: 2em;
+    background-color: rgb(209, 209, 209);
+    max-width:50vh;
+    min-width:16em;
+    list-style-type: none;
      
+    height: 100vh;
+    position:fixed;
+    top:0;
+    right:0;
+    padding: 2em 1em;
+    
+    
+  }
+   
+  #Filter.Open{
+    transform: translateX(0);
+  }
+
+  #FilterButton.ButtonHide{
+    display:none;
+    z-index: 0;
+  }
+  
     ul{
       display:flex;
       gap:130px;
@@ -56,146 +107,98 @@
      }
    
      @media only screen and (min-width: 960px) {
-  
-    Body{
-     
+      body{ 
         align-items: center;
         block-size: fit-content;
-        margin-left:200px;
-        margin-right:20px;
-         
-      
-     
-      }
-      Header > H1{
-        
-        color:#3A8070;
-        inline-size: 350px; 
-        overflow: hidden;
-      
+        margin-left:20px;
+        margin-right:17em;
       }
       
      
-     .StyleGuideTitel {
-  
-      display:flex;
-       gap:1050px;
+     .StylguideTitel{
+       display:flex;
+       gap:150px;
       }
      
       .LogoWrapper{
-      
-        max-width:500vh;
-        max-height:20vh;
-      }
-   
+        max-width:15vh;
+        max-height:15vh;
+      margin-left:-3em;
+    }
      
-      .LogoAndLink{
-        display:flex;
-         
-       gap: 100vh;
-      }
-     
-      .Colors{
-        
-        display:flex; 
-        gap: 400px;
-         
-         
-        
-      }
-      div > p{
-     
-        margin-top:200px;
-        gap: 30px;
-      
-        
-      }
-  
-      .FirstH3{
-        position: absolute;
-        margin-left:560px;
-        margin-bottom:700px;
-        
-      }
-      ul{
-        display:grid;
-        gap:130px;
-        margin-top: 300px;
-     
-     
-        
-     
-      }
-  
-      
-      
-     
-      .Green{
-        background-color:#3A8070;
-        margin-left:-35px;
-        min-width: 5rem;
-        max-width: 5rem;
-        min-height: 4rem;
-        padding:0.1rem;
-        list-style-type: none;
-        outline: 1px solid grey;
-      }
-     
-      .Black{
-        background-color:#000000;
-        margin-left:-35px;
-        min-width: 5rem;
-        max-width: 5rem;
-        min-height: 4rem;
-        padding:0.1rem;
-        list-style-type: none;
-        outline: 1px solid grey;
-      }
-     
-      .Grey{
-        background-color: #d9d9d9;
-        margin-left:-35px;
-        min-width: 5rem;
-        max-width: 5rem;
-        min-height: 4rem;
-        padding:0.1rem;
-        list-style-type: none;
-        outline: 1px solid grey;
-      }
-      .LightGrey{
-        background-color:#F6f7f9 ;
-         margin-left:-65px;
-        min-width: 5rem;
-        max-width: 5rem;
-        min-height: 4rem;
-        padding:0.1rem;
-        list-style-type: none;
-        outline: 1px solid grey;
-      }
-     .LightGreen{
-       background-color: #EBF2F1;
-       margin-left:-35px;
-       min-width: 5rem;
-       max-width: 5rem;
-       min-height: 4rem;
-       padding:0.1rem;
-       list-style-type: none;
-       outline: 1px solid grey;
-       
-     }
-     .White{
-       background-color: #FFFFFF;
-       outline: 1px solid grey;
-       margin-left:-35px;
-       min-width: 5rem;
-       max-width: 5rem;
-       min-height: 4rem;
-       padding:0.1rem;
-       list-style-type: none;
-       
-     
-   
-     }
+    .SearchInput{
+      margin-left:-3em;
+      margin-top:1em;
+      max-width:7em;
     }
   
- 
+    .Menu{
+      margin-left: -2em;
+      margin-top: 1em;
+      
+    }
+   details > summary{
+     list-style: none;
+   }
+    .Menu > ul{
+      margin-left:-1.5em;
+      list-style: none;
+    }
+      .LogoAndLink{
+       display:flex;
+       gap: 10vh;
+      }
+     
+    .SortAndFilter{
+      display: flex;
+      margin-left:6em;
+      gap:4em;
+      margin-left:130vh;
+  
+    }
+  span{
+     display:none;
+
+
+   }
+  
+    .Filter{
+      display:flex;
+      flex-direction: column;
+      line-height: 2em;
+      background-color: rgb(255, 255, 255);
+      max-width:50vh;
+      min-width:16em;
+      outline: 0.3em solid black;
+      border-radius: 0.2%;
+      
+      list-style-type: none;
+  
+      height: 100vh;
+       
+      top:0;
+      right:0;
+      padding: 2em 1em;
+      
+      
+    }
+  
+   
+    .Sort{
+      margin-left: 3em;
+    }
+      ul{
+        display:flex;
+        gap:130px;
+      }
+
+      .SummaryList{
+        display:flex;
+        flex-direction: column;
+        row-gap: 1em;
+      }
+     
+    
+       }
+  
+     
