@@ -14,7 +14,7 @@
           <nav class="NavTitel">
             <ul  style="list-style-type: none;" class="LogoAndLink">  
              <li><img class="LogoWrapper" src="./beyco_coffee_logo.png"></li>
-             <li><input class="SearchInput" type="text" placeholder="Search.."></li>
+             <li><input class="SearchInput" type="search" placeholder="Search.."></li>
              <li ><details class="Menu">
                 <summary> Menu</summary>
                  <ul class="SummaryList" style="list-style-type: none;" >
@@ -35,23 +35,69 @@
             <span id="FilterButton"> <h3>Filter</h3>
                 
             </span>
+            <form id="FilterForm" action="/action_page.php">  
+
             <section id="Filter" class="Filter">  
-                <h3 class="Welcome"> Filter </h3>  
-                <form>
-                    <label>Choose a country:</label>
-                    <select   class="Landen" name="LandSelect" data-minimum-results-for-search="infinity">
-                        <option value="Country">Country</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Ethipie">Ethopie</option>
-                        <option value="India">India </option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Myanmar">Myanmar</option>
-                        <option value="Uganda">Uganda</option>
+                <h3 class="Welcome"> Filter </h3>
+                <button id="CloseButton">X</button>
+                <fieldset>
+                    <details> 
+                    <summary class="CountrySummary">   <label>Choose a country:</label> 
+                    </summary>
+                     
+                     
+                        <input type="checkbox" id="Colombia" name="Colombia" value="Colombia">
+                        <label for="Colombia"> Colombia</label><br>
+                        <input type="checkbox" id="Uganda" name="Uganda" value="Uganda">
+                        <label for="Uganda"> Uganda</label><br>
+                        <input type="checkbox" id="India" name="India" value="India">
+                        <label for="India"> India</label> <br>
+                        <input type="checkbox" id="Colombia" name="Colombia" value="Colombia">
+                        <label for="Colombia"> Colombia</label><br>
+                        <input type="checkbox" id="Indonesia" name="Indonesia" value="Indonesia">
+                        <label for="Indonesia"> Indonesia</label><br>
+                        <input type="checkbox" id="Myanmar" name="Myanmar" value="Myanmar">
+                        <label for="Myanmar"> Myanmar</label> <br>
+                        <input type="checkbox" id="Ethiopie" name="Ethiopie" value="Ethiopie">
+                        <label for="Ethiopie"> Ethiopie </label> 
+                    
+                </details>
+
+ 
+
+
+                    
+                </fieldset>
+
+                <fieldset  class="FieldsetProcess"> 
+
+                   <h4>Process</h4>  
+                    <select   class="Proces" name="Process" data-minimum-results-for-search="infinity">
+                        <option value="FullyWashed">FullyWashed</option> 
+                        <option for="SemiWashed" value="SemiWashed">SemiWashed</option>
+                        <option value="Natural">Natural </option>
+                        <option value="Other">Other</option>
+                        <option value="All">All</option>
                     </select>
-                </form>
-                <form >
+                     
+                </fieldset>
+
+                <fieldset>  
+                   <label for="GradesOfChoice">Choose a flavor:</label>
+                   <input type="search"  id="GradesOfChoice" name="GradesOfChoice" >
+
+                    <datalist id="Grades">
+                        <option value="Chocolate">
+                        <option value="Coconut">
+                        <option value="Mint">
+                        <option value="Strawberry">
+                        <option value="Vanilla">
+                    </datalist>
+                </fieldset>
+
+                <fieldset >
                     <label>certification</label>
-                    <select   class="CertificationBox" name="LandSelect" data-minimum-results-for-search="infinity">
+                        <select   class="CertificationBox" name="LandSelect" data-minimum-results-for-search="infinity">
                         <option value="Certification">Certification</option>
                         <option value="Fairtrade">Fairtrade</option>
                         <option value="Rainforest">Rainforest Alliance</option>
@@ -60,9 +106,10 @@
                         <option value="VierC">4c</option>
                         <option value="CertifyAll">all</option>
                     </select>
-                </form>
+                </fieldset>
             </section>
-        </section>
+        </form>
+             
 
             <section class="FirstArticle"> 
                 <section></section> 
