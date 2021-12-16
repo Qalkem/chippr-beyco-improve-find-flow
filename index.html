@@ -71,15 +71,33 @@
 
                 <fieldset  class="FieldsetProcess"> 
 
-                   <h4>Process</h4>  
-                    <select   class="Proces" name="Process" data-minimum-results-for-search="infinity">
+                
+                    <details> 
+                        <summary class="SummaryProcess">   <label>Choose A process</label> 
+                        </summary>
+                         
+                         
+                            <input type="checkbox" id="FullyWashed" name="FullyWashed" value="FullyWashed">
+                            <label for="FullyWashed"> FullyWashed</label><br>
+                            <input type="checkbox" id="SemiWashed" name="SemiWashed" value="SemiWashed">
+                            <label for="SemiWashed"> SemiWashed</label><br>
+                            <input type="checkbox" id="Natural" name="Natural" value="Natural">
+                            <label for="Natural"> Natural</label> <br>
+                            <input type="checkbox" id="Other" name="Other value="Other">
+                            <label for="Other"> Other</label><br>
+                             
+                        
+                    </details>
+                     
+                </fieldset>
+                <fieldset>
+                    <select   class="Process" name="Process" data-minimum-results-for-search="infinity">
                         <option value="FullyWashed">FullyWashed</option> 
                         <option for="SemiWashed" value="SemiWashed">SemiWashed</option>
                         <option value="Natural">Natural </option>
                         <option value="Other">Other</option>
                         <option value="All">All</option>
                     </select>
-                     
                 </fieldset>
 
                 <fieldset>  

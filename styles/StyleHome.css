@@ -74,6 +74,13 @@
    background-color: white;
    outline:2px solid black;
  }
+ .SummaryProcess{
+  max-width: 10em;
+  min-width: 8em;
+  background-color: white;
+  outline:2px solid black;
+
+ }
  .SubmitButton{
    max-width:3em;
    max-height:3em;
@@ -87,7 +94,7 @@
  .FieldsetProcess{
    justify-content: center;
    align-items: center;
-   max-height: 6em;
+   min-height: 2em;
     
 
 
@@ -98,11 +105,12 @@
     display:flex;
     flex-direction: column;
     line-height: 2em;
-    background-color: rgb(209, 209, 209);
-    max-width:50vh;
-    min-width:16em;
+    outline:2px solid black;
+    box-shadow: 5px   rgb(0, 0, 0);
+    background-color: #EBF2F1;
+    max-width: 14.3em;
+    min-width:10em;
     list-style-type: none;
-     
     height: 100vh;
     position:fixed;
     top:0;
