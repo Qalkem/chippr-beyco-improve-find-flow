@@ -1,143 +1,290 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Beyco Newspage </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/StyleHome.css">
 
-      </head>
- 
-    <body>
-        <header>
-          <nav class="NavTitel">
-            <ul  style="list-style-type: none;" class="LogoAndLink">  
-             <li><img class="LogoWrapper" src="./beyco_coffee_logo.png"></li>
-             <li><input class="SearchInput" type="search" placeholder="Search.."></li>
-             <li ><details class="Menu">
-                <summary> Menu</summary>
-                 <ul class="SummaryList" style="list-style-type: none;" >
-                    <li><a href="https://beyco.nl/login" style="text-decoration: none;">Log in</a></li>
-                    <li><a href="https://beyco.nl/register" style="text-decoration: none;">Register</a></li>
-                   <li><a href="https://beyco.nl/for-whom/sellers" style="text-decoration: none;">Sellers</a></li>
-                   <li><a href="https://beyco.nl/for-whom/traders" style="text-decoration: none;">Traders</a></li> 
-                   <li><a href="https://beyco.nl/for-whom/buyers" style="text-decoration: none;">Buyers</a></li>
-                </ul>
-            </ul> 
-        </header>
-        <main>    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyco sorteer en filter  </title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
 
-            <section  class="SortAndFilter"> 
-            <section class="Sort">
-            <H3>Sort</H3>
-            </section>
-            <span id="FilterButton"> <h3>Filter</h3>
-                
-            </span>
-            <form id="FilterForm" action="/action_page.php">  
+<body>
 
-            <section id="Filter" class="Filter">  
-                <h3 class="Welcome"> Filter </h3>
-                <button id="CloseButton">X</button>
-                <fieldset>
-                    <details> 
-                    <summary class="CountrySummary">   <label>Choose a country:</label> 
-                    </summary>
-                     
-                     
-                        <input type="checkbox" id="Colombia" name="Colombia" value="Colombia">
-                        <label for="Colombia"> Colombia</label><br>
-                        <input type="checkbox" id="Uganda" name="Uganda" value="Uganda">
-                        <label for="Uganda"> Uganda</label><br>
-                        <input type="checkbox" id="India" name="India" value="India">
-                        <label for="India"> India</label> <br>
-                        <input type="checkbox" id="Colombia" name="Colombia" value="Colombia">
-                        <label for="Colombia"> Colombia</label><br>
-                        <input type="checkbox" id="Indonesia" name="Indonesia" value="Indonesia">
-                        <label for="Indonesia"> Indonesia</label><br>
-                        <input type="checkbox" id="Myanmar" name="Myanmar" value="Myanmar">
-                        <label for="Myanmar"> Myanmar</label> <br>
-                        <input type="checkbox" id="Ethiopie" name="Ethiopie" value="Ethiopie">
-                        <label for="Ethiopie"> Ethiopie </label> 
-                    
-                </details>
+  <header>
+    <nav class="NavTitel">
+      <ul  style="list-style-type: none;" class="LogoAndLink">  
+       <li><img class="LogoWrapper" src="./assets/img/beyco_coffee_logo.png"></li>
+       <li><input class="SearchInput" type="search" placeholder="Search.."></li>
+       <li ><details class="Menu" id='Menu'> 
+          <summary> Menu</summary>
+           <ul class="SummaryList" style="list-style-type: none;" >
+              <li><a href="https://beyco.nl/login" style="text-decoration: none;">Log in</a></li>
+              <li><a href="https://beyco.nl/register" style="text-decoration: none;">Register</a></li>
+             <li><a href="https://beyco.nl/for-whom/sellers" style="text-decoration: none;">Sellers</a></li>
+             <li><a href="https://beyco.nl/for-whom/traders" style="text-decoration: none;">Traders</a></li> 
+             <li><a href="https://beyco.nl/for-whom/buyers" style="text-decoration: none;">Buyers</a></li>
+          </ul>
+      </ul> 
+      </nav>
+  </header> 
+  <nav>  <section  id="SortAndFilter" class="SortAndFilter"> 
+    <section class="Sort">
+    <H3>Sort</H3>
+    </section>
+    <span id="FilterButton"> <h3>Filter</h3>
+        
+    </span>
+    <form id="FilterForm" >  
 
- 
-
-
-                    
-                </fieldset>
-
-                <fieldset  class="FieldsetProcess"> 
-
-                
-                    <details> 
-                        <summary class="SummaryProcess">   <label>Choose A process</label> 
-                        </summary>
-                         
-                         
-                            <input type="checkbox" id="FullyWashed" name="FullyWashed" value="FullyWashed">
-                            <label for="FullyWashed"> FullyWashed</label><br>
-                            <input type="checkbox" id="SemiWashed" name="SemiWashed" value="SemiWashed">
-                            <label for="SemiWashed"> SemiWashed</label><br>
-                            <input type="checkbox" id="Natural" name="Natural" value="Natural">
-                            <label for="Natural"> Natural</label> <br>
-                            <input type="checkbox" id="Other" name="Other value="Other">
-                            <label for="Other"> Other</label><br>
-                             
-                        
-                    </details>
-                     
-                </fieldset>
-                <fieldset>
-                    <select   class="Process" name="Process" data-minimum-results-for-search="infinity">
-                        <option value="FullyWashed">FullyWashed</option> 
-                        <option for="SemiWashed" value="SemiWashed">SemiWashed</option>
-                        <option value="Natural">Natural </option>
-                        <option value="Other">Other</option>
-                        <option value="All">All</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>  
-                   <label for="GradesOfChoice">Choose a flavor:</label>
-                   <input type="search"  id="GradesOfChoice" name="GradesOfChoice" >
-
-                    <datalist id="Grades">
-                        <option value="Chocolate">
-                        <option value="Coconut">
-                        <option value="Mint">
-                        <option value="Strawberry">
-                        <option value="Vanilla">
-                    </datalist>
-                </fieldset>
-
-                <fieldset >
-                    <label>certification</label>
-                        <select   class="CertificationBox" name="LandSelect" data-minimum-results-for-search="infinity">
-                        <option value="Certification">Certification</option>
-                        <option value="Fairtrade">Fairtrade</option>
-                        <option value="Rainforest">Rainforest Alliance</option>
-                        <option value="Organic">Orgaic</option>
-                        <option value="CAFE">C.A.F.E Practices</option>
-                        <option value="VierC">4c</option>
-                        <option value="CertifyAll">all</option>
-                    </select>
-                </fieldset>
-            </section>
-        </form>
+    <section id="Filter" class="Filter">  
+        <h3 class="Welcome"> Filter </h3>
+        <button id="CloseButton">X</button>
+        <fieldset>
+            <details> 
+            <summary class="CountrySummary">   <label>Choose a country:</label> 
+            </summary>
              
+             
+                <input type="checkbox" id="Colombia" name="Colombia" value="Colombia">
+                <label for="Colombia"> Colombia</label><br>
+                <input type="checkbox" id="Uganda" name="Uganda" value="Uganda">
+                <label for="Uganda"> Uganda</label><br>
+                <input type="checkbox" id="India" name="India" value="India">
+                <label for="India"> India</label> <br>
+                <input type="checkbox" id="Colombia" name="Colombia" value="Colombia">
+                <label for="Colombia"> Colombia</label><br>
+                <input type="checkbox" id="Indonesia" name="Indonesia" value="Indonesia">
+                <label for="Indonesia"> Indonesia</label><br>
+                <input type="checkbox" id="Myanmar" name="Myanmar" value="Myanmar">
+                <label for="Myanmar"> Myanmar</label> <br>
+                <input type="checkbox" id="Ethiopie" name="Ethiopie" value="Ethiopie">
+                <label for="Ethiopie"> Ethiopie </label> 
+            
+        </details>
 
-            <section class="FirstArticle"> 
-                <section></section> 
-                <section></section>
-                <section></section> 
-            <section class="NewsArticles"> 
-        </main>
-        <footer>  
-        </footer>  
-      </body>
-      <script src="scripts/style.js" ></script>
-     </html>
+
+
+
+            
+        </fieldset>
+
+        <fieldset  class="FieldsetProcess"> 
+
+        
+            <details> 
+                <summary class="SummaryProcess">   <label>Choose A process</label> 
+                </summary>
+                 
+                 
+                    <input type="checkbox" id="FullyWashed" name="FullyWashed" value="FullyWashed">
+                    <label for="FullyWashed"> FullyWashed</label><br>
+                    <input type="checkbox" id="SemiWashed" name="SemiWashed" value="SemiWashed">
+                    <label for="SemiWashed"> SemiWashed</label><br>
+                    <input type="checkbox" id="Natural" name="Natural" value="Natural">
+                    <label for="Natural"> Natural</label> <br>
+                    <input type="checkbox" id="Other" name="Other value="Other">
+                    <label for="Other"> Other</label><br>
+                     
+                
+            </details>
+             
+        </fieldset>
+        <fieldset>
+            <select   class="Process" name="Process" data-minimum-results-for-search="infinity">
+                <option value="FullyWashed">FullyWashed</option> 
+                <option for="SemiWashed" value="SemiWashed">SemiWashed</option>
+                <option value="Natural">Natural </option>
+                <option value="Other">Other</option>
+                <option value="All">All</option>
+            </select>
+        </fieldset>
+
+        <fieldset>  
+           <label for="GradesOfChoice">Choose a grade:</label>
+           <input type="search"  id="GradesOfChoice" name="GradesOfChoice" >
+
+            <datalist id="Grades">
+                <option value="Chocolate">
+                <option value="Coconut">
+                <option value="Mint">
+                <option value="Strawberry">
+                <option value="Vanilla">
+            </datalist>
+        </fieldset>
+
+        <fieldset >
+            <label>certification</label>
+                <select   class="CertificationBox" name="LandSelect" data-minimum-results-for-search="infinity">
+                <option value="Certification">Certification</option>
+                <option value="Fairtrade">Fairtrade</option>
+                <option value="Rainforest">Rainforest Alliance</option>
+                <option value="Organic">Orgaic</option>
+                <option value="CAFE">C.A.F.E Practices</option>
+                <option value="VierC">4c</option>
+                <option value="CertifyAll">all</option>
+            </select>
+        </fieldset>
+    </section>
+</form>
  
+    </nav>
+  <nav class="inpage">
+    <fieldset class="filter">
+   
+      
+      <button id="all" class="active">Show all</button>
+      <button id="natural">natural</button>
+      <button id="fullywashed">fullywashed</button>
+      <button id="robusta">robusta</button>
+      <button id="arabica">arabica</button>
+    </fieldset>
+  </nav>
+ 
+
+  <main>
+
+    <article>
+      
+      <img src="assets/img/cropped-icono_asoarhuaco.png"  >
+      <ul>
+        <li class="brand">asoarhuaco</li>
+        <li class="type">arabica</li>
+        <li class="score">84"</li>
+        <li class="country">colombia"</li>
+        <li class="quantity">40</li>
+        <li class="grade">grade1</li>
+        <li class="cupping score"> 84</li>
+          <ul>
+            <li class="PortOfExport">Cartagena</li>
+            <li class="Process">fully washed</li>
+          </ul>
+      </ul>
+    </article>
+
+    <article>
+     
+      <img src="assets/img/vlb8gioehul8giqazglfgonl0qjs.png"  >
+      <ul>
+        <li class="brand">Asistecampo</li>
+        <li class="type">arabica</li>
+        <li class="CuppingScore">84"</li>
+        <li class="country">colombia"</li>
+        <li class="quantity">40</li>
+        <li class="grade">grade1</li>
+        
+          <ul>
+            <li class="PortOfExport">Cartagena</li>
+            <li class="Process">fully washed</li>
+          </ul>
+      </ul>
+    </article>
+
+    <article>
+   
+      <img src="assets/img/5987db0b-8e6a-4ec1-a04e-3c00f4b5dd5f_CATURLOGOCMYK-01.png"  >
+      <ul>
+        <li class="brand">Asistecampo</li>
+        <li class="type">natural</li>
+        <li class="CuppingScore">84"</li>
+        <li class="country">colombia"</li>
+        <li class="quantity">40</li>
+        <li class="grade">grade1</li>
+        
+          <ul>
+            <li class="PortOfExport">Cartagena</li>
+            <li class="Process">fully washed</li>
+          </ul>
+      </ul>
+    </article>
+
+    <article>
+      
+      <img src="assets/img/Group-291.png"  >
+      <ul>
+        <li class="brand">Gujo Trading
+        </li>
+        <li class="type">natural</li>
+        <li class="CuppingScore">84"</li>
+        <li class="country">Kenya</li>
+        <li class="quantity">40</li>
+        <li class="grade">grade1</li>
+        
+          <ul>
+            <li class="PortOfExport">Djibouti</li>
+            <li class="Process">fully washed</li>
+          </ul>
+      </ul>
+    </article>
+
+    <article>
+   
+      <img src="assets/img/index.jpeg"  >
+      <ul>
+        <li class="brand">alfa jaya indonesia
+        </li>
+        <li class="type">robusta</li>
+        <li class="CuppingScore">84"</li>
+        <li class="country">Indonesia</li>
+        <li class="quantity">40</li>
+        <li class="grade">grade1</li>
+        
+          <ul>
+            <li class="PortOfExport">Tanjung Priok</li>
+            <li class="Process">fully washed</li>
+          </ul>
+      </ul>
+    </article>
+
+    <article>
+      
+      <img src="assets/img/hlFEfZ19_400x400.jpg" >
+      <ul>
+        <li class="brand">Mount Elgon
+        </li>
+        <li class="type">FullyWashed</li>
+        <li class="CuppingScore">84"</li>
+        <li class="country">Uganda</li>
+        <li class="quantity">40</li>
+        <li class="grade">grade3</li>
+        
+          <ul>
+            <li class="PortOfExport">Mumbasa</li>
+            <li class="Process">fully washed</li>
+          </ul>
+      </ul>
+    </article>
+
+    <article>
+    
+      
+
+    <article>
+     
+      <img src="assets/img/cropped-icono_asoarhuaco.png"  >
+      <ul>
+        <li class="brand">Asorhuaco
+        </li>
+        <li class="type">FullyWashed</li>
+        <li class="CuppingScore">84"</li>
+        <li class="country">Colombia</li>
+        <li class="quantity">40</li>
+        <li class="grade">grade3</li>
+        
+          <ul>
+            <li class="PortOfExport">Cartagena</li>
+            <li class="Process">fully washed</li>
+          </ul>
+      </ul>
+    </article>
+
+     
+  </main>
+
+  <footer>
+ 
+  </footer>
+
+  <script src="./scripts/script.js"></script>
+</body>
+</html>
